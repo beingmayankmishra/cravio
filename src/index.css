@@ -9,15 +9,11 @@
     height: 80px;
     padding-left: 20px;
     padding-top: 8%;
-
     border-radius: 50%;
     border: 2px solid #ddd;
     padding: 5px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     object-fit: cover;
-
-
-
 }
 
 .nav-items>ul {
@@ -32,32 +28,36 @@
 }
 
 .res-cards {
-
-    margin: 5px;
-   padding: 5px;
-   width: 200px;
-   
-
- 
+    margin: 10px; /* Add space between cards */
+    padding: 5px;
+    width: 200px;
+    border: 1px solid transparent; /* Optional for cleaner layout */
 }
 
-.res-container{
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.res-cards:hover{
+.res-cards:hover {
     cursor: pointer;
     border: 1px solid black;
 }
 
-.search{
+.res-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center the cards */
+}
+
+.search {
     padding: 10px;
-
 }
 
-.res-logo{
-    
+.res-logo {
     width: 100%;
-   
 }
+
+.filter-btn {
+    margin: 10px;
+    cursor: pointer;
+}
+
+
+
+
