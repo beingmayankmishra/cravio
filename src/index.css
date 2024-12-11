@@ -1,63 +1,194 @@
+/* Header Styling */
 .header {
-    display: flex;
-    justify-content: space-between;
-    border: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Align items vertically */
+  padding: 10px 20px; /* Add spacing around the header */
+  border: 1px solid black;
+  background-color: #f8f9fa; /* Light background color for professionalism */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Logo Styling */
+.logo-container {
+  display: flex;
+  align-items: center; /* Center the logo vertically */
 }
 
 .logo {
-    width: 80px;
-    height: 80px;
-    padding-left: 20px;
-    padding-top: 8%;
-    border-radius: 50%;
-    border: 2px solid #ddd;
-    padding: 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    object-fit: cover;
+  width: 70px; /* Adjusted size for better proportions */
+  height: 70px;
+  border-radius: 50%; /* Circular logo */
+  border: 2px solid #ddd;
+  padding: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for professionalism */
+  object-fit: cover;
 }
 
-.nav-items>ul {
-    font-size: 24px;
-    display: flex;
-    list-style-type: none;
+/* Navigation Items */
+.nav-items > ul {
+  font-size: 20px;
+  display: flex;
+  align-items: center; /* Vertically center the navigation items */
+  list-style-type: none;
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
 }
 
-.nav-items>ul>li {
-    padding: 10px;
-    margin: 10px;
+.nav-items > ul > li {
+  padding: 10px 15px; /* Add spacing around items */
+  margin: 0 10px; /* Add horizontal margin */
+  cursor: pointer;
+  transition: color 0.3s ease-in-out; /* Add hover transition */
 }
 
+.nav-items > ul > li:hover {
+  color: #007bff; /* Change color on hover */
+}
+
+/* Login Button */
+.login {
+  padding: 8px 16px; /* Add padding for a cleaner look */
+  margin-left: 20px; /* Add spacing between the button and navigation items */
+  border: 1px solid #007bff; /* Professional border */
+  border-radius: 5px; /* Rounded corners */
+  background-color: #007bff; /* Professional blue background */
+  color: white; /* White text */
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover transition */
+}
+
+.login:hover {
+  background-color: white;
+  color: #007bff; /* Invert colors on hover */
+  border: 1px solid #007bff;
+}
+
+/* Filter Section Adjustments */
+.filter {
+  display: flex;
+  align-items: center; /* Vertically align filter items */
+  justify-content: center; /* Center the filter bar */
+  margin: 20px 0; /* Add spacing around the filter section */
+}
+
+/* Restaurant Cards */
 .res-cards {
-    margin: 10px; /* Add space between cards */
-    padding: 5px;
-    width: 200px;
-    border: 1px solid transparent; /* Optional for cleaner layout */
+  margin: 10px; /* Add space between cards */
+  padding: 5px;
+  width: 200px;
+  border: 1px solid transparent; /* Optional for cleaner layout */
 }
 
 .res-cards:hover {
-    cursor: pointer;
-    border: 1px solid black;
+  cursor: pointer;
+  border: 1px solid black;
 }
 
+/* Restaurant Container */
 .res-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center the cards */
+}
+
+/* Search Section */
+.search {
+  padding: 10px;
+}
+
+/* Restaurant Logo */
+.res-logo {
+  width: 100%;
+}
+
+/* Filter Button */
+.filter-btn {
+  margin: 10px;
+  cursor: pointer;
+}
+
+/* Body Defaults */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+
+/* Container styling */
+.shimmer-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* Center the cards */
-}
-
-.search {
-    padding: 10px;
-}
-
-.res-logo {
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  /* Card styling */
+  .shimmer-card {
+    width: 200px;
+    height: 300px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    padding: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: shimmerEffect 1.5s infinite ease-in-out;
+    overflow: hidden;
+  }
+  
+  /* Placeholder for image */
+  .shimmer-image {
     width: 100%;
-}
-
-.filter-btn {
-    margin: 10px;
-    cursor: pointer;
-}
-
+    height: 120px;
+    background-color: #e0e0e0;
+    border-radius: 8px;
+    margin-bottom: 16px;
+  }
+  
+  /* Lines for text placeholders */
+  .shimmer-line {
+    width: 100%;
+    height: 12px;
+    background-color: #e0e0e0;
+    border-radius: 4px;
+    margin-bottom: 8px;
+  }
+  
+  .shimmer-line-title {
+    width: 70%;
+  }
+  
+  .shimmer-line-subtitle {
+    width: 50%;
+  }
+  
+  .shimmer-line-description {
+    width: 90%;
+  }
+  
+  /* Shimmer animation */
+  @keyframes shimmerEffect {
+    0% {
+      background: linear-gradient(
+        to right,
+        #f0f0f0 0%,
+        #e0e0e0 50%,
+        #f0f0f0 100%
+      );
+      background-size: 200% 100%;
+    }
+    100% {
+      background-position: -200% 0;
+    }
+  }
+  
 
 
 

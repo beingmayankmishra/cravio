@@ -1,6 +1,11 @@
 import React from "react";
+import { useState } from "react";
 
 function Logo() {
+
+  const [btnNmaeReact ,setbtnNmaeReact] = useState("Login")
+
+
   return (
     <>
       <div className="header">
@@ -13,6 +18,7 @@ function Logo() {
                 <li>About Us</li>
                 <li>Contact Us</li>
                 <li>Cart</li>
+                <button className="login"onClick={()=> {btnNmaeReact === "Login" ? setbtnNmaeReact("Logout") : setbtnNmaeReact("Login") }} >{btnNmaeReact}</button>
             </ul>
         </div>
       </div>
