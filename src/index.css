@@ -116,6 +116,10 @@ body {
   box-sizing: border-box;
 }
 
+.user-card{
+  border: 2px solid black;
+}
+
 
 
 

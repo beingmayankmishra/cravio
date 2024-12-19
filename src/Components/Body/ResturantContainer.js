@@ -1,6 +1,9 @@
 import ResturantCard from "./ResturantCard";
 import { useState, useEffect } from "react";
 import Shimmer from "../../Shimmer";
+import { Link } from "react-router-dom";
+import useOnlineStatus from "../utils/useOnlineStatus";
+
 
 const ResturantContainer = () => {
   const [reslist, setRestList] = useState([]); // Full list of restaurants
@@ -47,6 +50,9 @@ const ResturantContainer = () => {
     setfilteredResturant(filteredList);
   };
 
+  const onlineStatus = useOnlineStatus();
+  if(onlineStatus === false) return <h1>Looks like you're offline!! plesae check your internet connection</h1>
+
   // Conditional Rendering
   return reslist.length === 0 ? (
     <Shimmer />
@@ -71,7 +77,7 @@ const ResturantContainer = () => {
       {/* Restaurant Cards */}
       <div className="res-container">
         {filteredResturant.map((restaurant) => (
-          <ResturantCard key={restaurant.info.id} resdata={restaurant} />
+         <Link key={restaurant.info.id} to={"/restaurants/"+restaurant.info.id}><ResturantCard  resdata={restaurant} /> </Link>
         ))}
       </div>
     </div>
