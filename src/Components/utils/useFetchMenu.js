@@ -7,6 +7,7 @@ const useFetchMenu = (resId) => {
   const [error, setError] = useState(null);
 
   const fetchMenu = useCallback(async () => {
+    
     setIsLoading(true);
     try {
       const response = await fetch(
